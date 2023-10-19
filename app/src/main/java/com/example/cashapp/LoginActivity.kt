@@ -44,7 +44,29 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+
+            //connect to welcome activity
+            if(isValidEmail(email) && isValidPassword(password)){
+                if (validateLogin(binding.email.text.toString(), binding.password.text.toString())){
+                    val intent = Intent(this@LoginActivity,WelcomeActivity::class.java)
+                    intent.putExtra("email", binding.emaiL.text.toString())
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    startActivity(intent)
+
+                } else {
+                    Toast.makeText(this, "Invalid login credentials", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
+
+    }
+
+    //validate functions for welcome activity
+    private fun validateLogin(email : String, password : String) : Boolean {
+        //send email and password to API and let API validate the credentials
+        //check API response
+        return true
     }
 
     private fun isValidPassword(password: String): Boolean {
