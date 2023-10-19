@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         emailEditText = findViewById(R.id.editTextTextEmailAddress)
         passwordEditText = findViewById(R.id.editTextTextPassword)
