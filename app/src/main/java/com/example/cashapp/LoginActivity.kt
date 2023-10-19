@@ -50,6 +50,7 @@ class LoginActivity : AppCompatActivity() {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     startActivity(intent)
+                    //finish()
 
                 } else {
                     Toast.makeText(this, "Invalid login credentials", Toast.LENGTH_SHORT).show()
