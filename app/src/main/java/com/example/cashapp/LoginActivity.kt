@@ -8,10 +8,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
+
 class LoginActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
+
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +47,8 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+
+
 
             //connect to welcome activity
             if(isValidEmail(email) && isValidPassword(password)){
@@ -78,4 +83,6 @@ class LoginActivity : AppCompatActivity() {
         val emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}".toRegex()
         return email.matches(emailPattern)
     }
+
+    
 }
