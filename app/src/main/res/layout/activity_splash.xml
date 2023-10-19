@@ -7,11 +7,16 @@
     tools:context=".LoginActivity">
 
     <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="189dp"
         android:layout_height="264dp"
         android:src="@drawable/cash_img"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <TextView
         android:id="@+id/textView"
@@ -20,6 +25,12 @@
         android:style="@style/TextAppearance.Material3.HeadlineLarge"
         android:text="Cash App"
         android:textColor="@color/black"
-        android:textSize="56sp" />
+        android:textSize="56sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
