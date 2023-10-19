@@ -19,8 +19,6 @@
         android:style="@style/TextAppearance.Material3.HeadlineLarge"
         android:text="Cash App"
         android:textColor="@color/black"
-        android:textSize="56sp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="389dp" />
+        android:textSize="56sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
