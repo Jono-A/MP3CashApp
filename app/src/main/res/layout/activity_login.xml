@@ -85,7 +85,8 @@
           app:layout_constraintStart_toStartOf="parent"
           app:strokeColor="#404040"
           app:strokeWidth="4dp"
-          tools:text="SIGN UP" /> -->
+          tools:text="SIGN UP" />
+          -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
