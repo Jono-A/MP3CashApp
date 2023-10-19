@@ -22,7 +22,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:style="@style/TextAppearance.Material3.HeadlineLarge"
         android:text="Cash App"
         android:textColor="@color/black"
         android:textSize="56sp"
