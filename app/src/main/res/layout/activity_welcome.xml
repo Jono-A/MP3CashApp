@@ -7,48 +7,55 @@
     tools:context=".WelcomeActivity"
     android:background="@color/blue">
 
-    <TextView
-        android:id="@+id/cashBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cash Balance"
-        android:textSize="25dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/Pesos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Php 0.07"
-        app:layout_constraintEnd_toEndOf="50dp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="50dp"
-        app:layout_constraintTop_toTopOf="50dp">
+        <TextView
+            android:id="@+id/cashBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash Balance"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Pesos"
+            app:layout_constraintHorizontal_bias="0.0" />
 
-    </TextView>
+        <TextView
+            android:id="@+id/Pesos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Php 0.07"
+            app:layout_constraintTop_toBottomOf="@+id/cashBalance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
 
-    <Button
-        android:id="@+id/scanButton"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="424dp"
-        android:text="Scan QR Code"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cashBalance" />
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="Scan QR Code"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Pesos"
+            app:layout_constraintVertical_bias="0.818" />
 
-    <Button
-        android:id="@+id/addMoneyButton"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:text="Send Money"
-        app:layout_constraintTop_toBottomOf="@+id/scanButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        <Button
+            android:id="@+id/addMoneyButton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="Send Money"
+            app:layout_constraintTop_toBottomOf="@+id/scanButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
