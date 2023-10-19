@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Scan QR Code (ZEKE)" />
+            android:text="Scan QR Code" />
 
         <Button
             android:id="@+id/addMoneyButton"
@@ -35,7 +35,7 @@
             android:layout_below="@+id/scanButton"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:text="Sean POGI" />
+            android:text="Send Money" />
 
     </RelativeLayout>
 
