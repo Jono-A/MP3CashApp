@@ -13,10 +13,13 @@
 
         <TextView
             android:id="@+id/cashBalance"
+            android:background="@drawable/border"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="32dp"
             android:text="Cash Balance"
+            android:textAppearance="bold"
             android:textAllCaps="true"
             android:textSize="20dp"
             app:layout_constraintEnd_toStartOf="@+id/Pesos"
@@ -28,15 +31,19 @@
             android:id="@+id/Pesos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/border"
             android:text="Php 100.00"
             android:textSize="50dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cashBalance" />
 
         <Button
             android:id="@+id/scanButton"
+            android:backgroundTint="#DAB80B"
+            android:textColor="@color/black"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:text="Scan QR Code"
@@ -49,6 +56,8 @@
 
         <Button
             android:id="@+id/addMoneyButton"
+            android:backgroundTint="#DAB80B"
+            android:textColor="@color/black"
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:text="Send Money"
