@@ -19,7 +19,6 @@
             android:layout_marginStart="45dp"
             android:layout_marginTop="32dp"
             android:text="Cash Balance"
-            android:textAppearance="bold"
             android:textAllCaps="true"
             android:textSize="20dp"
             app:layout_constraintEnd_toStartOf="@+id/Pesos"
