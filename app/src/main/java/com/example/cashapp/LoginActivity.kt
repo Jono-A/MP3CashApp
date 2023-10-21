@@ -12,10 +12,20 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
     private lateinit var mGoogleSignInClient: GoogleSignInClient
+    private lateinit var gso : GoogleSignInOptions
+    private lateinit var viewModel : AuthenticationViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel = AuthenticationViewModel()
+        viewModel.getStates().observe(this@SigninActivity){
+            renderUi(it)
+        }
+
+        createRequest()
 
         binding.btnSignin.setOnClickListener {
             var errorCount = 0
