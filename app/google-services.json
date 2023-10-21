@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "778723680005",
+    "project_id": "mp3cashapp-92dbd",
+    "storage_bucket": "mp3cashapp-92dbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778723680005:android:335eddf1c5931f3bb9a16c",
+        "android_client_info": {
+          "package_name": "com.example.cashapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1QcLoBDhDs53PykouOC4-SbegUk-6UuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
