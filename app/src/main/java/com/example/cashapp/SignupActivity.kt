@@ -34,7 +34,8 @@ class SignupActivity : AppCompatActivity() {
         when(state) {
             is AuthenticationStates.SignedUp -> viewModel.createUserRecord(
                 binding.tieName.text.toString(),
-                binding.tieEmail.text.toString())
+                binding.tieEmail.text.toString(),
+                binding.tiePassword.text.toString())
 
             is AuthenticationStates.ProfileUpdated -> {
                 WelcomeActivity.launch(this@SignupActivity)
