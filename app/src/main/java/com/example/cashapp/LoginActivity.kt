@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.cashapp.databinding.ActivityLoginBinding
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -57,6 +59,8 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+
+
     }
 
     private fun validateLogin (email : String, password : String) : Boolean {
