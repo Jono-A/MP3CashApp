@@ -10,11 +10,8 @@ import android.text.SpannableString
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
-import android.util.Log
 import android.view.View
-import android.widget.Toast
-import com.example.cashapp.databinding.ActivitySignupBinding
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
+import com.example.cashapp.databinding.ActivityLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -24,7 +21,7 @@ import com.google.firebase.ktx.Firebase
 
 class SigninActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivitySigninBinding
+    private lateinit var binding : ActivityLoginBinding
     private lateinit var viewModel : AuthenticationViewModel
     private lateinit var gso : GoogleSignInOptions
     private lateinit var mGoogleSignInClient: GoogleSignInClient
@@ -32,7 +29,7 @@ class SigninActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySigninBinding.inflate(layoutInflater)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         viewModel = AuthenticationViewModel()
@@ -40,7 +37,6 @@ class SigninActivity : AppCompatActivity() {
             renderUi(it)
         }
 
-        createRequest()
 
         with(binding) {
             btnSignin.setOnClickListener {
@@ -50,11 +46,6 @@ class SigninActivity : AppCompatActivity() {
                 )
             }
 
-            btnGoogle.setOnClickListener {
-                mGoogleSignInClient.signOut()
-                val signInIntent = mGoogleSignInClient.signInIntent
-                startActivityForResult(signInIntent, 2)
-            }
 
             tvSignup.apply {
                 text = addClickableLink("Don't have an account yet? Sign up", "Sign up"){

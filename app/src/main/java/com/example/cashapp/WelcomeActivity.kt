@@ -1,5 +1,6 @@
 package com.example.cashapp
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -10,7 +11,7 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun launch(signupActivity: SignupActivity) {
+        fun launch(activity: Activity) {
 
         }
     }
