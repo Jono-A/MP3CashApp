@@ -8,4 +8,10 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
     }
+
+    companion object {
+        fun launch(signupActivity: SignupActivity) {
+
+        }
+    }
 }

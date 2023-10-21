@@ -156,17 +156,19 @@ class AuthenticationViewModel : ViewModel() {
         }
     }
 
-    fun createUserRecord(name : String, program : String, section : String, email : String) {
+    fun createUserRecord(name : String, email : String) {
         val users = Users(
             name,
-            program,
-            section,
             email
         )
         ref.child("code14demo/users/" + auth.currentUser?.uid).setValue(users).addOnCompleteListener {
             if(it.isSuccessful) states.value = AuthenticationStates.ProfileUpdated
             else states.value = AuthenticationStates.Error
         }
+    }
+
+    fun createUserRecord(name: String,) {
+
     }
 
 }
