@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.cashapp.databinding.ActivityLoginBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
@@ -60,7 +62,20 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
+        btnGoogle.setOnClickListener {
+            mGoogleSignInClient.signOut()
+            val signInIntent = mGoogleSignInClient.signInIntent
+            startActivityForResult(signInIntent, 2)
+        }
 
+    }
+
+    private fun createRequest() {
+        gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
     private fun validateLogin (email : String, password : String) : Boolean {
